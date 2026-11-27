@@ -27,6 +27,7 @@ A contagem de linhas lidas bate com a de cada arquivo (nenhuma linha perdida na 
 | Remover duplicados por posto+produto+dia (mantida a primeira ocorrência) | 18 | 14 idênticos e 4 com preços conflitantes (mesmo posto, mesmo dia, dois preços) |
 | Remover preço acima de 1,5x a mediana do produto no mesmo estado e mês | 1.054 | Prováveis erros: por exemplo, etanol com preço de gasolina em dois postos no mesmo dia e diesel S10 a R$ 9,00 repetido |
 | Marcar como atípico (coluna `preco_atipico`) o preço abaixo de 0,7x ou entre 1,3x e 1,5x da mediana | 8.249 | Mantidos na base: podem ser preços regionais reais (ex.: etanol em região produtora) |
+| `dim_posto` usa o cadastro mais recente de cada CNPJ | 5 CNPJs | Mudaram de município ao longo do período (períodos sem sobreposição, UF inalterada); impacto de 0,02% dos postos, restrito às análises por município |
 
 ## Verificações que passaram sem ajuste
 - Datas: 0 inválidas.
